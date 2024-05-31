@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회사 및 서비스 소개</title>
+    <style>
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            height: 85px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        .navbar-left, .navbar-right {
+            display: flex;
+            gap: 15px;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .center-image {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .center-image img {
+            width: 100px; /* 가로 크기 조정 */
+            height: 100px; /* 세로 크기 조정 */
+            object-fit: cover;
+        }
+        .content {
+            margin-left: 22%; /* 사이드바와 겹치지 않도록 여백 설정 */
+            padding: 20px;
+        }
+        .footer {
+            clear: both;
+            text-align: center;
+            padding: 20px;
+        }
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .left-text {
+            font-weight: bold;
+            margin: 20px;
+            font-size: 18px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        p {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <a href="notices.html">공지사항</a>|
+            <a href="faq.html">자주 묻는 질문 FAQ</a>|
+            <a href="contact.html">1:1 문의</a>|
+            <a href="about.html">회사소개</a>
+        </div>
+        <div class="center-image">
+            <img src="제목.png" alt="이미지">
+        </div>
+        <div class="navbar-right">
+            <a href="home.html">홈</a>|
+            <a href="search.html">검색</a>|
+            <a href="signup.html">회원가입</a>|
+            <a href="login.html">로그인</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>회사 및 서비스 소개</h1>
+        <p>저희 회사는 품질과 혁신에 중점을 두고 고객에게 가치 있는 서비스를 제공하는 것을 목표로 하고 있습니다. 우리는 고객들이 신뢰할 수 있는 파트너가 되기 위해 노력하고 있으며, 최신 기술과 전문 지식을 활용하여 다양한 분야에서 최고의 서비스를 제공하고 있습니다.</p>
+
+        <h2>주요 서비스</h2>
+        <ul>
+            <li>서비스 1: 세부 설명 및 장점</li>
+            <li>서비스 2: 세부 설명 및 장점</li>
+            <li>서비스 3: 세부 설명 및 장점</li>
+            <li>서비스 4: 세부 설명 및 장점</li>
+        </ul>
+
+        <p>우리 회사는 다음과 같은 가치를 중시합니다:</p>
+        <ul>
+            <li>고객 만족</li>
+            <li>혁신적인 아이디어</li>
+            <li>탁월한 서비스 품질</li>
+            <li>지속 가능한 성장</li>
+        </ul>
+
+        <p>더 많은 정보를 원하시면 문의하기 페이지를 참고해주세요.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항</title>
+    <style>
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            height: 85px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        .navbar-left, .navbar-right {
+            display: flex;
+            gap: 15px;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .center-image {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .center-image img {
+            width: 100px; /* 가로 크기 조정 */
+            height: 100px; /* 세로 크기 조정 */
+            object-fit: cover;
+        }
+        .content {
+            margin-left: 22%; /* 사이드바와 겹치지 않도록 여백 설정 */
+            padding: 20px;
+        }
+        .footer {
+            clear: both;
+            text-align: center;
+            padding: 20px;
+        }
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .left-text {
+            font-weight: bold;
+            margin: 20px;
+            font-size: 18px;
+        }
+        .content {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .content h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .notice-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .notice-list li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .notice-list li:last-child {
+            border-bottom: none;
+        }
+        .notice-list li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .notice-list li a:hover {
+            text-decoration: underline;
+        }
+        .notice-date {
+            display: block;
+            margin-top: 5px;
+            font-size: 12px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <a href="notices.html">공지사항</a>|
+            <a href="faq.html">자주 묻는 질문 FAQ</a>|
+            <a href="contact.html">1:1 문의</a>|
+            <a href="about.html">회사소개</a>
+        </div>
+        <div class="center-image">
+            <img src="제목.png" alt="이미지">
+        </div>
+        <div class="navbar-right">
+            <a href="home.html">홈</a>|
+            <a href="search.html">검색</a>|
+            <a href="signup.html">회원가입</a>|
+            <a href="login.html">로그인</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>공지사항</h1>
+        <ul class="notice-list">
+            <li>
+                <a href="#">서비스 점검 안내</a>
+                <span class="notice-date">2024-05-29</span>
+            </li>
+            <li>
+                <a href="#">신규 기능 업데이트 공지</a>
+                <span class="notice-date">2024-05-25</span>
+            </li>
+            <li>
+                <a href="#">보안 업데이트 공지</a>
+                <span class="notice-date">2024-05-20</span>
+            </li>
+            <li>
+                <a href="#">이용 약관 변경 안내</a>
+                <span class="notice-date">2024-05-15</span>
+            </li>
+            <li>
+                <a href="#">고객센터 운영 시간 변경 안내</a>
+                <span class="notice-date">2024-05-10</span>
+            </li>
+            <li>
+                <a href="#">정기 점검 안내</a>
+                <span class="notice-date">2024-05-05</span>
+            </li>
+            <li>
+                <a href="#">시스템 개선 작업 공지</a>
+                <span class="notice-date">2024-05-01</span>
+            </li>
+            <li>
+                <a href="#">신규 서비스 출시 안내</a>
+                <span class="notice-date">2024-04-25</span>
+            </li>
+            <li>
+                <a href="#">프로모션 이벤트 안내</a>
+                <span class="notice-date">2024-04-20</span>
+            </li>
+            <li>
+                <a href="#">개인정보 처리 방침 변경 안내</a>
+                <span class="notice-date">2024-04-15</span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

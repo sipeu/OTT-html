@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <style>
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            height: 85px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        .navbar-left, .navbar-right {
+            display: flex;
+            gap: 15px;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .center-image {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .center-image img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+        .signup-form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            max-width: 600px;
+            width: 100%;
+            margin: 50px auto;
+        }
+        .signup-form h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .signup-form input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        .signup-form button {
+            width: calc(100% - 20px);
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+        }
+        .signup-form button:hover {
+            background-color: #45a049;
+        }
+        .message {
+            display: none;
+            color: green;
+            margin-top: 20px;
+        }
+        .error-message {
+            color: red;
+            margin-left: 10px;
+        }
+        .success-message {
+            color: green;
+            margin-left: 10px;
+        }
+        #check-username-btn {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <a href="notices.html">공지사항</a>|
+            <a href="faq.html">자주 묻는 질문 FAQ</a>|
+            <a href="contact.html">1:1 문의</a>|
+            <a href="about.html">회사소개</a>
+        </div>
+        <div class="center-image">
+            <img src="제목.png" alt="이미지">
+        </div>
+        <div class="navbar-right">
+            <a href="home.html">홈</a>|
+            <a href="search.html">검색</a>|
+            <a href="signup.html">회원가입</a>|
+            <a href="login.html">로그인</a>
+        </div>
+    </div>
+
+    <div class="signup-form">
+        <h2>회원가입</h2>
+        <form id="signup-form" action="#" method="post">
+            <input type="text" name="username" placeholder="사용자 이름" required>
+            <input type="date" name="birthdate" placeholder="생년월일" required>
+            <input type="email" name="email" placeholder="이메일" required>
+            <input type="password" name="password" id="password" placeholder="비밀번호" required>
+            <input type="password" name="confirm_password" id="confirm-password" placeholder="비밀번호 확인" required>
+
+            <div id="password-mismatch-error" class="error-message" style="display: none;">비밀번호가 일치하지 않습니다.</div>
+            <button type="submit">가입하기</button>
+        </form>
+        <div class="message" id="message" style="display: none;"><b>회원가입이 완료되었습니다! 잠시후 홈으로 돌아갑니다.</b></div>
+    </div>
+
+    <script>
+        // 폼 제출 시 이벤트 핸들러
+        document.getElementById('signup-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // 기본 동작 방지
+
+            // 비밀번호 확인
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirm-password').value;
+            var passwordMismatchError = document.getElementById('password-mismatch-error');
+
+            if (password !== confirmPassword) {
+                passwordMismatchError.style.display = 'block';
+                return;
+            } else {
+                passwordMismatchError.style.display = 'none';
+            }
+
+            // 회원가입 완료 메시지 표시
+            document.getElementById('message').style.display = 'block';
+
+            // 가입 완료 후 홈페이지로 이동
+            setTimeout(function() {
+                window.location.href = "home.html";
+            }, 2000); // 2초 후 이동
+        });
+    </script>
+</body>
+</html>
