@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색</title>
+    <style>
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            height: 85px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        .navbar-left, .navbar-right {
+            display: flex;
+            gap: 15px;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .center-image {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .center-image img {
+            width: 100px; /* 가로 크기 조정 */
+            height: 100px; /* 세로 크기 조정 */
+            object-fit: cover;
+        }
+        .content {
+            margin-left: 22%; /* 사이드바와 겹치지 않도록 여백 설정 */
+            padding: 20px;
+        }
+        .footer {
+            clear: both;
+            text-align: center;
+            padding: 20px;
+        }
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .search-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .search-input {
+            width: 60%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .search-button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .search-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <a href="notices.html">공지사항</a>|
+            <a href="faq.html">자주 묻는 질문 FAQ</a>|
+            <a href="contact.html">1:1 문의</a>|
+            <a href="about.html">회사소개</a>
+        </div>
+        <div class="center-image">
+            <img src="제목.png" alt="이미지">
+        </div>
+        <div class="navbar-right">
+            <a href="loginhome.html">홈</a>|
+            <a href="search1-1.html">검색</a>|
+            <a href="Information.html">내 정보 수정</a>|
+            <a href="logout.html">로그아웃</a>
+        </div>
+    </div>
+
+    <div class="search-container">
+        <form action="search1-1-1.html" method="get">
+            <input type="text" class="search-input" name="query" placeholder="검색어를 입력하세요">
+            <button type="submit" class="search-button">검색</button>
+        </form>
+    </div>
+</body>
+</html>
